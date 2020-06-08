@@ -111,7 +111,7 @@ $(document).ready(function(){
   #ask span.join {
     padding: 10px;
     background-color: #ddd;
-    -webkit-border-radius: 10px;
+    /* -webkit-border-radius: 10px; */
   }
   #channel {
     margin-top: 100px;
@@ -168,21 +168,24 @@ $(document).ready(function(){
   div#input #message {
     width: 600px;
     border: 5px solid #bbb;
-    -webkit-border-radius: 3px;
+    /* -webkit-border-radius: 3px; */
     font-size: 30pt;
+  }
+  .wast{
+    text-align: center;
+
   }
 </style>
 </head>
 <body>
+
   <div id="ask" class="bordered" style="display: none;">
-    <div class="bordered">
-      <img src="ensabimg.png"/>
-    </div>
+    <h1 class="wast">ENSAB Chatroom</h1>
     Name: <input type="text" id="name" /> <a href="#"><span class="join">Join!</span></a>
   </div>
   <div id="channel" class="bordered" style="display: none;">
     <div id="descr" class="bordered">
-      <h1>ENSAB Chatroom</h1>
+      <h1 class="wast">ENSAB Chatroom</h1>
     </div>
     <div id="msgs">
       <ul>
