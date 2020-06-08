@@ -1,7 +1,7 @@
 var app = require('http').createServer(handler),
 	io = require('socket.io').listen(app),
 	fs = require('fs');
-	app.listen(3001); 
+	app.listen(process.env.PORT || 3001); 
 	
 	function handler(req, res) {
 		fs.readFile(__dirname + '/index.html',
@@ -26,7 +26,7 @@ var app = require('http').createServer(handler),
 
 		socket.on('join', function(data) {
 			var msg = JSON.parse(data);
-			var reply = JSON.stringify({action: 'control', user: msg.user, msg: 'Dkhal LChat' });
+			var reply = JSON.stringify({action: 'control', user: msg.user, msg: 'joined the channel' });
 			socket.emit('chat', reply);
 			socket.broadcast.emit('chat', reply);
 		});

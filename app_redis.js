@@ -3,7 +3,7 @@ var app = require('http').createServer(handler),
 	fs = require('fs'),
 	redis = require('redis');
 
-app.listen(3001);
+app.listen(process.env.PORT || 3001);
 
 function handler(req, res) {
 	fs.readFile(__dirname + '/index.html',
